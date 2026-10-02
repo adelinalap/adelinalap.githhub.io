@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adelina Lapidus | Marketing Student Portfolio</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            brand: {
+              50: '#faf7f5',
+              100: '#f4ede7',
+              200: '#e7d8cc',
+              300: '#d7bcab',
+              400: '#c39d87',
+              500: '#b08169',
+              600: '#9d6c56',
+              700: '#815645',
+              800: '#6b483c',
+              900: '#583c33',
+            },
+            accent: {
+              rose: '#e8bebe',
+              cream: '#fcfaf8',
+              slate: '#1c1917'
+            }
+          }
+        }
+      }
+    }
+  </script>
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-accent-cream text-stone-800 font-sans antialiased selection:bg-brand-200 selection:text-stone-900 flex flex-col min-h-screen">
+
+  <!-- Navigation Bar -->
+  <nav class="sticky top-0 z-50 backdrop-blur-md bg-accent-cream/80 border-b border-stone-200/60 transition-all duration-300">
+    <div class="max-w-5xl mx-auto px-6 h-20 flex items-center justify-between">
+      <a href="#about" class="font-serif text-2xl font-semibold tracking-wide text-stone-900 hover:text-brand-600 transition-colors">
+        Adelina Lapidus
+      </a>
+      
+      <!-- Desktop Menu -->
+      <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide uppercase">
+        <a href="#about" class="hover:text-brand-600 transition-colors">About</a>
+        <a href="#skills" class="hover:text-brand-600 transition-colors">Skills</a>
+        <a href="#projects" class="hover:text-brand-600 transition-colors">Projects</a>
+        <a href="#contact" class="hover:text-brand-600 transition-colors">Contact</a>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-stone-700 hover:text-stone-900 focus:outline-none">
+        <i class="fa-solid fa-bars text-xl"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown -->
+    <div id="mobile-menu" class="hidden md:hidden bg-accent-cream border-b border-stone-200 px-6 py-4 flex flex-col space-y-3 uppercase text-sm tracking-wide font-medium">
+      <a href="#about" class="mobile-link py-1 hover:text-brand-600">About</a>
+      <a href="#skills" class="mobile-link py-1 hover:text-brand-600">Skills</a>
+      <a href="#projects" class="mobile-link py-1 hover:text-brand-600">Projects</a>
+      <a href="#contact" class="mobile-link py-1 hover:text-brand-600">Contact</a>
+    </div>
+  </nav>
+
+  <main class="flex-grow max-w-5xl mx-auto w-full px-6 py-12 md:py-20 space-y-28">
+
+    <!-- About Me Section -->
+    <section id="about" class="pt-4 scroll-mt-28">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+        <div class="md:col-span-8 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-brand-100/70 text-brand-800 text-xs tracking-wider uppercase font-semibold">
+            <i class="fa-solid fa-graduation-cap"></i> Rutgers Business School
+          </div>
+          
+          <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl font-bold text-stone-900 leading-tight">
+            Hi, I'm <span class="text-brand-600 italic font-normal">Adelina Lapidus</span>.
+          </h1>
+          
+          <p class="text-lg md:text-xl text-stone-600 font-light leading-relaxed">
+            I am currently a junior at <strong class="text-stone-800 font-medium">Rutgers Business School</strong> majoring in <strong class="text-stone-800 font-medium">Marketing</strong>, set to graduate in <strong class="text-stone-800 font-medium">May 2028</strong>.
+          </p>
+
+          <p class="text-stone-600 leading-relaxed font-light">
+            I am passionate about understanding consumer behavior, brand development, and strategic management. My academic journey combines creative storytelling with analytical business strategies to drive impactful real-world results.
+          </p>
+
+          <div class="pt-2 flex flex-wrap gap-4">
+            <a href="#projects" class="inline-flex items-center gap-2 bg-stone-900 text-white px-6 py-3 rounded-lg text-sm font-medium tracking-wide hover:bg-brand-700 transition-all shadow-sm hover:shadow-md">
+              View My Projects <i class="fa-solid fa-arrow-right text-xs"></i>
+            </a>
+            <a href="#contact" class="inline-flex items-center gap-2 bg-white text-stone-800 border border-stone-300 px-6 py-3 rounded-lg text-sm font-medium tracking-wide hover:bg-stone-50 hover:border-stone-400 transition-all">
+              Get In Touch
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-4 flex justify-center">
+          <div class="relative">
+            <!-- Decorative Accent Ring -->
+            <div class="absolute -inset-3 bg-brand-200/50 rounded-2xl transform rotate-3 -z-10"></div>
+            
+            <div class="w-60 h-72 sm:w-64 sm:h-80 bg-stone-900 rounded-xl shadow-xl flex flex-col justify-center items-center text-center p-6 text-white border border-stone-800">
+              <div class="w-24 h-24 rounded-full bg-brand-500/20 border border-brand-400/30 flex items-center justify-center text-3xl font-serif text-brand-200 mb-4">
+                AL
+              </div>
+              <h2 class="font-serif text-2xl font-medium">Adelina Lapidus</h2>
+              <p class="text-xs uppercase tracking-widest text-brand-300 mt-1">Marketing Major</p>
+              <p class="text-xs text-stone-400 mt-3 font-light">Rutgers Class of '28</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="scroll-mt-28">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900">Skills & Strengths</h2>
+        <div class="w-12 h-0.5 bg-brand-500 mx-auto"></div>
+        <p class="text-stone-600 text-sm md:text-base font-light">My strengths and practical capabilities that I developed through collaborative academic work and professional settings</p>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        
+        <!-- Skill 1 -->
+        <div class="p-6 bg-white rounded-xl border border-stone-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center text-brand-700 text-xl mb-4">
+            <i class="fa-solid fa-comments"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-stone-900 mb-2">Strong Communication</h3>
+          <p class="text-stone-600 text-sm font-light leading-relaxed">
+            Adept at expressing marketing concepts clearly, facilitating active discussions, and conveying ideas persuasively across teams.
+          </p>
+        </div>
+
+        <!-- Skill 2 -->
+        <div class="p-6 bg-white rounded-xl border border-stone-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center text-brand-700 text-xl mb-4">
+            <i class="fa-solid fa-people-group"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-stone-900 mb-2">Ability to Work in Groups</h3>
+          <p class="text-stone-600 text-sm font-light leading-relaxed">
+            Thrives in collaborative environments, leveraging individual strengths to achieve shared project goals and solve complex problems.
+          </p>
+        </div>
+
+        <!-- Skill 3 -->
+        <div class="p-6 bg-white rounded-xl border border-stone-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center text-brand-700 text-xl mb-4">
+            <i class="fa-solid fa-language"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-stone-900 mb-2">Conversational in Spanish</h3>
+          <p class="text-stone-600 text-sm font-light leading-relaxed">
+            Able to connect and communicate effectively in Spanish, enhancing multicultural engagement and perspective.
+          </p>
+        </div>
+
+        <!-- Skill 4 -->
+        <div class="p-6 bg-white rounded-xl border border-stone-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center text-brand-700 text-xl mb-4">
+            <i class="fa-solid fa-sliders"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-stone-900 mb-2">Easily Adaptable</h3>
+          <p class="text-stone-600 text-sm font-light leading-relaxed">
+            Quick to adjust to new tools and dynamic workplace environments
+          </p>
+        </div>
+
+        <!-- Skill 5 -->
+        <div class="p-6 bg-white rounded-xl border border-stone-200/80 shadow-sm hover:shadow-md hover:-translate-y-1 transition-all duration-300 sm:col-span-2 lg:col-span-1">
+          <div class="w-12 h-12 rounded-lg bg-brand-100 flex items-center justify-center text-brand-700 text-xl mb-4">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold text-stone-900 mb-2">Eager to Learn</h3>
+          <p class="text-stone-600 text-sm font-light leading-relaxed">
+            Driven by curiosity and a commitment to learning, constantly seeking opportunities to expand my industry knowledge.
+          </p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="scroll-mt-28">
+      <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+        <h2 class="font-serif text-3xl md:text-4xl font-bold text-stone-900">Featured Projects</h2>
+        <div class="w-12 h-0.5 bg-brand-500 mx-auto"></div>
+        <p class="text-stone-600 text-sm md:text-base font-light"></p>
+      </div>
+
+      <div class="space-y-10">
+
+        <!-- Project 1 -->
+        <article class="bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-sm hover:shadow-md transition-shadow grid grid-cols-1 md:grid-cols-12">
+          <div class="p-8 md:col-span-8 flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-100 text-brand-800">
+                  Management Skills Course
+                </span>
+                <span class="text-xs text-stone-400 font-light">Rutgers Business School</span>
+              </div>
+              
+              <h3 class="font-serif text-2xl md:text-3xl font-semibold text-stone-900">
+                Akihi Local Business Consulting: Employee Turnover Solution
+              </h3>
+
+              <p class="text-stone-600 text-sm md:text-base font-light leading-relaxed pt-2">
+                In my Management Skills course, I collaborated with a team to partner with a local business, <strong>Akihi</strong>, to tackle their ongoing issue with high employee turnover.
+              </p>
+              
+              <p class="text-stone-600 text-sm md:text-base font-light leading-relaxed">
+                This project was a great experience as it provided practical insights into the core responsibilities of leadership and management. I gained firsthand understanding of key employee motivators, organizational culture, and strategies for creating sustainable workplace engagement.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-stone-100 flex flex-wrap gap-2 text-xs font-medium text-stone-500">
+              <span class="px-2.5 py-1 bg-stone-100 rounded">Employee Motivation</span>
+              <span class="px-2.5 py-1 bg-stone-100 rounded">Team Problem-Solving</span>
+              <span class="px-2.5 py-1 bg-stone-100 rounded">Local Business Strategy</span>
+            </div>
+          </div>
+
+          <div class="bg-stone-900 p-8 md:col-span-4 flex flex-col justify-center items-center text-center text-white border-t md:border-t-0 md:border-l border-stone-800">
+            <i class="fa-solid fa-briefcase text-4xl text-brand-300 mb-4"></i>
+            <h4 class="font-serif text-lg font-medium text-brand-100">Consulting & Retention</h4>
+            <p class="text-xs text-stone-400 mt-2 font-light"></p>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="bg-white rounded-2xl border border-stone-200/90 overflow-hidden shadow-sm hover:shadow-md transition-shadow grid grid-cols-1 md:grid-cols-12">
+          <div class="p-8 md:col-span-8 flex flex-col justify-between space-y-6">
+            <div class="space-y-3">
+              <div class="flex items-center gap-3">
+                <span class="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-wider bg-brand-100 text-brand-800">
+                  Job Simulation
+                </span>
+                <span class="text-xs text-stone-400 font-light">Forage Program</span>
+              </div>
+
+              <h3 class="font-serif text-2xl md:text-3xl font-semibold text-stone-900">
+                Forage Marketing Explorer Job Simulation
+              </h3>
+
+              <p class="text-stone-600 text-sm md:text-base font-light leading-relaxed pt-2">
+                I completed the Forage Marketing Explorer Job Simulation to gain exposure to the various career paths open to marketing graduates.
+              </p>
+
+              <p class="text-stone-600 text-sm md:text-base font-light leading-relaxed">
+                By stepping into diverse marketing roles during the simulation, I identified the strategic areas that resonated most with my interests and strengths. This hands-on experience offered clear career clarity that will guide my search as I apply for roles in the marketing industry.
+              </p>
+            </div>
+
+            <div class="pt-4 border-t border-stone-100 flex flex-wrap gap-2 text-xs font-medium text-stone-500">
+              <span class="px-2.5 py-1 bg-stone-100 rounded">Career Exploration</span>
+              <span class="px-2.5 py-1 bg-stone-100 rounded">Marketing Strategy</span>
+              <span class="px-2.5 py-1 bg-stone-100 rounded">Practical Simulation</span>
+            </div>
+          </div>
+
+          <div class="bg-brand-900 p-8 md:col-span-4 flex flex-col justify-center items-center text-center text-white border-t md:border-t-0 md:border-l border-brand-800">
+            <i class="fa-solid fa-chart-line text-4xl text-brand-200 mb-4"></i>
+            <h4 class="font-serif text-lg font-medium text-brand-100">Career & Role Discovery</h4>
+            <p class="text-xs text-brand-200/80 mt-2 font-light"></p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="scroll-mt-28">
+      <div class="bg-white rounded-3xl p-8 md:p-12 border border-stone-200/80 shadow-sm text-center max-w-3xl mx-auto space-y-6">
+        <div class="w-12 h-12 bg-brand-100 text-brand-700 rounded-full flex items-center justify-center mx-auto text-xl">
+          <i class="fa-regular fa-envelope"></i>
+        </div>
+        
+        <h2 class="font-serif text-3xl font-bold text-stone-900">Let's Connect</h2>
+        
+        <p class="text-stone-600 font-light text-sm md:text-base max-w-md mx-auto">
+          I am always excited to discuss potential internship opportunities, marketing projects, or business strategy discussions.
+        </p>
+
+        <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <a href="mailto:adelina.lapidus@rutgers.edu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-stone-900 hover:bg-brand-700 text-white font-medium px-8 py-3.5 rounded-xl text-sm transition-all shadow-sm">
+            <i class="fa-regular fa-paper-plane"></i> Send an Email
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white border border-stone-300 text-stone-700 hover:bg-stone-50 font-medium px-8 py-3.5 rounded-xl text-sm transition-all">
+            <i class="fa-brands fa-linkedin text-brand-600"></i> LinkedIn Profile
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-stone-200 bg-white/50 py-8 text-center text-xs text-stone-500 font-light">
+    <p>&copy; <span id="year"></span> Adelina Lapidus. Rutgers Business School.</p>
+  </footer>
+
+  <script>
+    // Set dynamic year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+      });
+    });
+  </script>
+</body>
+</html>
